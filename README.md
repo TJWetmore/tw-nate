@@ -27,7 +27,7 @@ or head to https://hub.docker.com/repository/docker/twetmore/tw-nate/
 - There is no unit test for the front end. I would have to use E2E testing for anything similar, which was not in the specs. 
 
 
-## Refactoring thoughts
+## Refactoring
 - I would much prefer if all the words were the innerHTML of each element. It just makes more sense and is ultimately more usable. But overall this exercise should demonstrate my skills even if there's things that I could go back and nitpick 
 - I cached results so it would be faster for the end user. The issue is that I didn't put the time into allowing for filtering results on the front end, so when the user retrieves old searches, it won't filter. This isn't hard to do, you would have functions in the browswer to sort current state, but I just didn't get to it. 
 
