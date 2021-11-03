@@ -1,12 +1,10 @@
 import fetch from 'cross-fetch';
-import { Logger } from "../logger/logger";
 
 
 interface HashTable {
   [key: string]: number;
 }
 
-const logger = new Logger()
 
 export const getText = async (url:string, filter:string) => {
   let parcedText = [];
@@ -23,7 +21,7 @@ export const getText = async (url:string, filter:string) => {
 
 const textParcer = (data:string, filter:string) =>{
   //O(n) time complexity. Use Regex to replace unnecessary characters from the string, leaving only letters
-  const alphabet = data.replace(/[^A-Za-z'"]+/g, " ").trim()
+  const alphabet = data.replace(/[^A-Za-z'|']+/g, " ").trim()
   // O(n^2) time complexity. Make all wrords lower case and turn it into an array for array methods (sort, forEach)
   const lowerCaseArray = alphabet.toLowerCase().split(' ')
   const hash:HashTable = {};

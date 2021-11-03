@@ -1,18 +1,15 @@
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
-import { Logger } from '../logger/logger';
-import Search from './user';
+import Search from './searches';
 
 class Routes {
   public express: express.Application;
 
-  public logger: Logger;
 
   constructor() {
     this.express = express();
     this.middleware();
     this.routes();
-    this.logger = new Logger();
   }
 
   // Configure Express middleware.

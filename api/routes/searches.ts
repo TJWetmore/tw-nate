@@ -1,14 +1,11 @@
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as NodeCache from 'node-cache';
-import { Logger } from '../logger/logger';
 import { getText } from '../functions/getText';
 
 class Search {
   public express: express.Application;
-
-  public logger: Logger;
-
+  
   public client: any;
 
   private searches: any[];
@@ -20,7 +17,6 @@ class Search {
     this.middleware();
     this.routes();
     this.searches = [];
-    this.logger = new Logger();
     this.cache = new NodeCache();
   }
 

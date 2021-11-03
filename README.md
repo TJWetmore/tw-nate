@@ -2,18 +2,18 @@
 
 ## Running this sucker
 ### Locally: 
-- open three terminals and navigate to the root file, the 'my-app' file, and the 'api' file. Then run 'npm i' on all three. Then run 'npm start' for all three and navigate to localhost:3000 to see the application
+- open three terminals and navigate to the root file, the 'frontend' file, and the 'api' file. Then run 'npm i' on all three. Then run 'npm start' for all three and navigate to localhost:3000 to see the application
 
 ### In Docker
 #### I assume you have Docker Desktop. Run: 
-- docker build -t twetmore/tw-nate .
+- docker build -t tw-nate .
 - docker run -d -it -p  3080:3080 tw-nate
-then you should be able to access it on localhost:3080
+then you should be able to access the image on on localhost:3080
 
 you can also run 'docker pull twetmore/tw-nate:latest' or head to https://hub.docker.com/repository/docker/twetmore/tw-nate/
 
 ## Frontend
-- Using React and Javascript. React's core values is state management, monodirectional dataflow, and replicability of components. This is demonstrated thru the main state being held in the 'app' file, the data and functionality being passed to the relative components, and the tables where the '<td>' tags are reusable components
+- Using React and Javascript. React's core values is state management, monodirectional dataflow, and replicability of components. This is demonstrated thru the main state being held in the 'app' file, the data and functionality being passed to the relative components, and the tables where the 'td' tags are reusable components
 - Also note that I overused a loading spinner and that this is triggered any time I am doing data processing or trying to interact with the server. That's just good practice to prevent users from going haywire and sending a zillion requests
 
 ## Backend
@@ -29,7 +29,8 @@ you can also run 'docker pull twetmore/tw-nate:latest' or head to https://hub.do
 
 ## Refactoring thoughts
 - I would much prefer if all the words were the innerHTML. It just makes more sense and is ultimately more usable. But overall this exercise should demonstrate my skills even if there's things that I could go back and nitpick 
-- I cached results so it would be faster for the end user. 
+- I cached results so it would be faster for the end user. The issue is that I didn't put the time into allowing for filtering results on the front end, so when the user retrieves old searches, it won't filter. This isn't hard to do, you would have functions in the browswer to sort current state, but I just didn't get to it. 
+
 
 
 
