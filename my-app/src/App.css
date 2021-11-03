@@ -1,0 +1,36 @@
+
+table {
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+.header {
+  width: 100%;
+  padding: 2%;
+  background-color: burlywood;
+  color: white;
+  text-align: center;
+}
+
+.previous-searches {
+  font-size: 1rem;
+  text-align: left;
+  overflow-x: break-word;
+}
+
+
+.search-results {
+  font-size: 1rem;
+  text-align: left;
+  overflow-x: break-word;
+  overflow-wrap: break-word;
+}
+
+
+.error-text{
+  color:red
+}
+
+.mrgnbtm {
+  margin-top: 20px;
+}
