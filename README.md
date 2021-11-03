@@ -52,11 +52,14 @@ bonus
 what to sort by
 ** included, but only in the initial call to the backend. cannot sort in the browser. Causes issues with the cached results, which could easily be fixed **
 3. Use a functional programming approach when possible
-** it is in javascript, which has supports first class functionality. I 
+** it is in javascript, which has supports first class functionality. I also threw in some OOP **
 4. Leave comments where your code isn’t easily maintainable / readable and explain why
 (do not over comment your code)
+** did not over comment. But did comment the core function **
 5. Distributed system design (think how your solution will scale when input text grows
 significantly)
+** included cacheing for scalability**
+
 
 
 
